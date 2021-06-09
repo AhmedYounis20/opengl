@@ -2,6 +2,7 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 from time import sleep
+from random import randint
 def Init(w,h):
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
@@ -21,7 +22,10 @@ def draw():
     global t
     t+=1
     glColor(0,0.2,0.4,1)
+
+
     glLoadIdentity()
+
     glTranslate(0,0,-20)
     glRotate(x_angle, 1, 0 , 0)
     glRotate(y_angle, 0, 1 , 0)
